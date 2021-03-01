@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1, user-scalable=no">
+  <meta name="description" content="API docs for the FirebaseStore class from the firebase_database_rest library, for the Dart programming language.">
+  <title>FirebaseStore class - firebase_database_rest library - Dart API</title>
+
+  
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono:ital,wght@0,300;0,400;0,500;0,700;1,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="../static-assets/github.css">
+  <link rel="stylesheet" href="../static-assets/styles.css">
+  <link rel="icon" href="../static-assets/favicon.png">
+
+</head>
+
+<body data-base-href="../"
+      data-using-base-href="false">
+
+<div id="overlay-under-drawer"></div>
+
+<header id="title">
+  <button id="sidenav-left-toggle" type="button">&nbsp;</button>
+  <ol class="breadcrumbs gt-separated dark hidden-xs">
+    <li><a href="../index.html">firebase_database_rest</a></li>
+    <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
+    <li class="self-crumb">FirebaseStore<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> abstract class</li>
+  </ol>
+  <div class="self-name">FirebaseStore</div>
+  <form class="search navbar-right" role="search">
+    <input type="text" id="search-box" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+  </form>
+</header>
+
+<main>
+
+  <div id="dartdoc-sidebar-left" class="sidebar sidebar-offcanvas-left">
+    <header id="header-search-sidebar" class="hidden-l">
+      <form class="search-sidebar" role="search">
+        <input type="text" id="search-sidebar" autocomplete="off" disabled class="form-control typeahead" placeholder="Loading search...">
+      </form>
+    </header>
+    
+    <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
+      <li><a href="../index.html">firebase_database_rest</a></li>
+      <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
+      <li class="self-crumb">FirebaseStore<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span> abstract class</li>
+    </ol>
+    
+    <h5>firebase_database_rest library</h5>
+    <ol>
+  <li class="section-title"><a href="../firebase_database_rest/firebase_database_rest-library.html#classes">Classes</a></li>
+  <li><a href="../firebase_database_rest/ApiConstants-class.html">ApiConstants</a></li>
+  <li><a href="../firebase_database_rest/AutoRenewStream-class.html">AutoRenewStream</a></li>
+  <li><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a></li>
+  <li><a href="../firebase_database_rest/Filter-class.html">Filter</a></li>
+  <li><a href="../firebase_database_rest/FilterBuilder-class.html">FilterBuilder</a></li>
+  <li><a href="../firebase_database_rest/FirebaseDatabase-class.html">FirebaseDatabase</a></li>
+  <li><a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a></li>
+  <li><a href="../firebase_database_rest/FirebaseTimestamp-class.html">FirebaseTimestamp</a></li>
+  <li><a href="../firebase_database_rest/FirebaseTransaction-class.html">FirebaseTransaction</a></li>
+  <li><a href="../firebase_database_rest/KeyEvent-class.html">KeyEvent</a></li>
+  <li><a href="../firebase_database_rest/PatchSet-class.html">PatchSet</a></li>
+  <li><a href="../firebase_database_rest/SingleCommitTransaction-class.html">SingleCommitTransaction</a></li>
+  <li><a href="../firebase_database_rest/StoreEvent-class.html">StoreEvent</a></li>
+  <li><a href="../firebase_database_rest/StoreEventTransformer-class.html">StoreEventTransformer</a></li>
+  <li><a href="../firebase_database_rest/StoreKeyEventTransformer-class.html">StoreKeyEventTransformer</a></li>
+  <li><a href="../firebase_database_rest/StoreValueEventTransformer-class.html">StoreValueEventTransformer</a></li>
+  <li><a href="../firebase_database_rest/Timeout-class.html">Timeout</a></li>
+  <li><a href="../firebase_database_rest/ValueEvent-class.html">ValueEvent</a></li>
+
+  <li class="section-title"><a href="../firebase_database_rest/firebase_database_rest-library.html#extension">Extensions</a></li>
+  <li><a href="../firebase_database_rest/FormatModeX.html">FormatModeX</a></li>
+  <li><a href="../firebase_database_rest/PrintModeX.html">PrintModeX</a></li>
+  <li><a href="../firebase_database_rest/WriteSizeLimitX.html">WriteSizeLimitX</a></li>
+
+
+
+
+
+  <li class="section-title"><a href="../firebase_database_rest/firebase_database_rest-library.html#enums">Enums</a></li>
+  <li><a href="../firebase_database_rest/FormatMode-class.html">FormatMode</a></li>
+  <li><a href="../firebase_database_rest/PrintMode-class.html">PrintMode</a></li>
+  <li><a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a></li>
+
+  <li class="section-title"><a href="../firebase_database_rest/firebase_database_rest-library.html#typedefs">Typedefs</a></li>
+  <li><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a></li>
+  <li><a href="../firebase_database_rest/DataToJsonCallback.html">DataToJsonCallback</a></li>
+  <li><a href="../firebase_database_rest/PatchDataCallback.html">PatchDataCallback</a></li>
+  <li><a href="../firebase_database_rest/PatchSetFactory.html">PatchSetFactory</a></li>
+  <li><a href="../firebase_database_rest/StreamFactory.html">StreamFactory</a></li>
+
+  <li class="section-title"><a href="../firebase_database_rest/firebase_database_rest-library.html#exceptions">Exceptions</a></li>
+  <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
+  <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
+  <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
+  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
+  <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
+</ol>
+
+  </div>
+
+  <div id="dartdoc-main-content" class="main-content">
+      <div><h1><span class="kind-class">FirebaseStore&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
+ </h1></div>
+
+    
+
+    <section class="summary offset-anchor" id="constructors">
+      <h2>Constructors</h2>
+
+      <dl class="constructor-summary-list">
+        <dt id="FirebaseStore" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.html">FirebaseStore</a></span><span class="signature">(<span class="parameter" id="-param-parent">{<span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a></span> <span class="parameter-name">parent</span>, </span><span class="parameter" id="-param-path"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>}</span>)</span>
+        </dt>
+        <dd>
+           
+        </dd>
+        <dt id="FirebaseStore.api" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.api.html">FirebaseStore.api</a></span><span class="signature">(<span class="parameter" id="api-param-restApi">{<span>required</span> <span class="type-annotation"><a href="../rest/RestApi-class.html">RestApi</a></span> <span class="parameter-name">restApi</span>, </span><span class="parameter" id="api-param-subPaths"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">subPaths</span>}</span>)</span>
+        </dt>
+        <dd>
+           
+        </dd>
+        <dt id="FirebaseStore.apiCreate" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCreate.html">FirebaseStore.apiCreate</a></span><span class="signature">(<span class="parameter" id="apiCreate-param-restApi">{<span>required</span> <span class="type-annotation"><a href="../rest/RestApi-class.html">RestApi</a></span> <span class="parameter-name">restApi</span>, </span><span class="parameter" id="apiCreate-param-subPaths"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">subPaths</span>, </span><span class="parameter" id="apiCreate-param-onDataFromJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataFromJson</span>, </span><span class="parameter" id="apiCreate-param-onDataToJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataToJsonCallback.html">DataToJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataToJson</span>, </span><span class="parameter" id="apiCreate-param-onPatchData"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/PatchDataCallback.html">PatchDataCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onPatchData</span>}</span>)</span>
+        </dt>
+        <dd>
+           
+          <div class="constructor-modifier features">factory</div>
+        </dd>
+        <dt id="FirebaseStore.create" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.create.html">FirebaseStore.create</a></span><span class="signature">(<span class="parameter" id="create-param-parent">{<span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a></span> <span class="parameter-name">parent</span>, </span><span class="parameter" id="create-param-path"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span><span class="parameter" id="create-param-onDataFromJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataFromJson</span>, </span><span class="parameter" id="create-param-onDataToJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataToJsonCallback.html">DataToJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataToJson</span>, </span><span class="parameter" id="create-param-onPatchData"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/PatchDataCallback.html">PatchDataCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onPatchData</span>}</span>)</span>
+        </dt>
+        <dd>
+           
+          <div class="constructor-modifier features">factory</div>
+        </dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-properties">
+      <h2>Properties</h2>
+
+      <dl class="properties">
+        <dt id="hashCode" class="property inherited">
+          <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/hashCode.html">hashCode</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/int-class.html">int</a></span>         
+        </dt>
+        <dd class="inherited">
+          The hash code for this object. <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/hashCode.html">[...]</a>
+                  <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="path" class="property">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/path.html">path</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>         
+        </dt>
+        <dd>
+           
+                  <div class="features">read-only</div>
+</dd>
+        <dt id="restApi" class="property">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/restApi.html">restApi</a></span>
+          <span class="signature">&#8594; <a href="../rest/RestApi-class.html">RestApi</a></span>         
+        </dt>
+        <dd>
+           
+                  <div class="features">final</div>
+</dd>
+        <dt id="runtimeType" class="property inherited">
+          <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/runtimeType.html">runtimeType</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Type-class.html">Type</a></span>         
+        </dt>
+        <dd class="inherited">
+          A representation of the runtime type of the object. 
+                  <div class="features">read-only, inherited</div>
+</dd>
+        <dt id="subPaths" class="property">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/subPaths.html">subPaths</a></span>
+          <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span>         
+        </dt>
+        <dd>
+           
+                  <div class="features">final</div>
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor" id="instance-methods">
+      <h2>Methods</h2>
+      <dl class="callables">
+        <dt id="all" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/all.html">all</a></span><span class="signature">(<wbr><span class="parameter" id="all-param-eTagReceiver">{<span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="create" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/create.html">create</a></span><span class="signature">(<wbr><span class="parameter" id="create-param-data"><span class="type-annotation">T</span> <span class="parameter-name">data</span>, </span><span class="parameter" id="create-param-eTagReceiver">{<span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="dataFromJson" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/dataFromJson.html">dataFromJson</a></span><span class="signature">(<wbr><span class="parameter" id="dataFromJson-param-json"><span class="type-annotation">dynamic</span> <span class="parameter-name">json</span></span>)
+            <span class="returntype parameter">&#8594; T</span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
+</dd>
+        <dt id="dataToJson" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/dataToJson.html">dataToJson</a></span><span class="signature">(<wbr><span class="parameter" id="dataToJson-param-data"><span class="type-annotation">T</span> <span class="parameter-name">data</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
+</dd>
+        <dt id="delete" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/delete.html">delete</a></span><span class="signature">(<wbr><span class="parameter" id="delete-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="delete-param-eTag">{<span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eTag</span>, </span><span class="parameter" id="delete-param-eTagReceiver"><span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="destroy" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></span><span class="signature">(<wbr><span class="parameter" id="destroy-param-eTag">{<span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eTag</span>, </span><span class="parameter" id="destroy-param-eTagReceiver"><span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">void</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="keys" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/keys.html">keys</a></span><span class="signature">(<wbr><span class="parameter" id="keys-param-eTagReceiver">{<span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="mapTransform" class="callable inherited">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></span><span class="signature">(<wbr><span class="parameter" id="mapTransform-param-data"><span class="type-annotation">dynamic</span> <span class="parameter-name">data</span>, </span><span class="parameter" id="mapTransform-param-dataFromJson"><span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">dataFromJson</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">T</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+           
+                  <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a>, inherited</div>
+</dd>
+        <dt id="noSuchMethod" class="callable inherited">
+          <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
+            <span class="returntype parameter">&#8594; dynamic</span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="patchData" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></span><span class="signature">(<wbr><span class="parameter" id="patchData-param-data"><span class="type-annotation">T</span> <span class="parameter-name">data</span>, </span><span class="parameter" id="patchData-param-updatedFields"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">updatedFields</span></span>)
+            <span class="returntype parameter">&#8594; T</span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
+</dd>
+        <dt id="query" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/query.html">query</a></span><span class="signature">(<wbr><span class="parameter" id="query-param-filter"><span class="type-annotation"><a href="../firebase_database_rest/Filter-class.html">Filter</a></span> <span class="parameter-name">filter</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="queryKeys" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/queryKeys.html">queryKeys</a></span><span class="signature">(<wbr><span class="parameter" id="queryKeys-param-filter"><span class="type-annotation"><a href="../firebase_database_rest/Filter-class.html">Filter</a></span> <span class="parameter-name">filter</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="read" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/read.html">read</a></span><span class="signature">(<wbr><span class="parameter" id="read-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="read-param-eTagReceiver">{<span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="streamAll" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/streamAll.html">streamAll</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../firebase_database_rest/StoreEvent-class.html">StoreEvent</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="streamEntry" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/streamEntry.html">streamEntry</a></span><span class="signature">(<wbr><span class="parameter" id="streamEntry-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../firebase_database_rest/ValueEvent-class.html">ValueEvent</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="streamKeys" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/streamKeys.html">streamKeys</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../firebase_database_rest/KeyEvent-class.html">KeyEvent</a></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="streamQuery" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/streamQuery.html">streamQuery</a></span><span class="signature">(<wbr><span class="parameter" id="streamQuery-param-filter"><span class="type-annotation"><a href="../firebase_database_rest/Filter-class.html">Filter</a></span> <span class="parameter-name">filter</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../firebase_database_rest/StoreEvent-class.html">StoreEvent</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="streamQueryKeys" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/streamQueryKeys.html">streamQueryKeys</a></span><span class="signature">(<wbr><span class="parameter" id="streamQueryKeys-param-filter"><span class="type-annotation"><a href="../firebase_database_rest/Filter-class.html">Filter</a></span> <span class="parameter-name">filter</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../firebase_database_rest/KeyEvent-class.html">KeyEvent</a></span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="subStore" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/subStore.html">subStore</a></span><span class="signature">&lt;<wbr><span class="type-parameter">U</span>&gt;</span><span class="signature">(<wbr><span class="parameter" id="subStore-param-path">{<span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span><span class="parameter" id="subStore-param-onDataFromJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">U</span>&gt;</span></span> <span class="parameter-name">onDataFromJson</span>, </span><span class="parameter" id="subStore-param-onDataToJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataToJsonCallback.html">DataToJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">U</span>&gt;</span></span> <span class="parameter-name">onDataToJson</span>, </span><span class="parameter" id="subStore-param-onPatchData"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/PatchDataCallback.html">PatchDataCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">U</span>&gt;</span></span> <span class="parameter-name">onPatchData</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a><span class="signature">&lt;<wbr><span class="type-parameter">U</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="toString" class="callable inherited">
+          <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          A string representation of this object. <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/toString.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+        <dt id="transaction" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/transaction.html">transaction</a></span><span class="signature">(<wbr><span class="parameter" id="transaction-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="transaction-param-eTagReceiver">{<span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="../firebase_database_rest/FirebaseTransaction-class.html">FirebaseTransaction</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="update" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/update.html">update</a></span><span class="signature">(<wbr><span class="parameter" id="update-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="update-param-updateFields"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">updateFields</span>, </span><span class="parameter" id="update-param-currentData">{<span class="type-annotation">T?</span> <span class="parameter-name">currentData</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+        <dt id="write" class="callable">
+          <span class="name"><a href="../firebase_database_rest/FirebaseStore/write.html">write</a></span><span class="signature">(<wbr><span class="parameter" id="write-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="write-param-data"><span class="type-annotation">T</span> <span class="parameter-name">data</span>, </span><span class="parameter" id="write-param-silent">{<span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/bool-class.html">bool</a></span> <span class="parameter-name">silent</span> = <span class="default-value">false</span>, </span><span class="parameter" id="write-param-eTag"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eTag</span>, </span><span class="parameter" id="write-param-eTagReceiver"><span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Future-class.html">Future</a><span class="signature">&lt;<wbr><span class="type-parameter">T?</span>&gt;</span></span>
+          </span>
+                  </dt>
+        <dd>
+           
+                  
+</dd>
+      </dl>
+    </section>
+
+    <section class="summary offset-anchor inherited" id="operators">
+      <h2>Operators</h2>
+      <dl class="callables">
+        <dt id="operator ==" class="callable inherited">
+          <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/operator_equals.html">operator ==</a></span><span class="signature">(<wbr><span class="parameter" id="==-param-other"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object-class.html">Object</a></span> <span class="parameter-name">other</span></span>)
+            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/bool-class.html">bool</a></span>
+          </span>
+                  </dt>
+        <dd class="inherited">
+          The equality operator. <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/operator_equals.html">[...]</a>
+                  <div class="features">inherited</div>
+</dd>
+      </dl>
+    </section>
+
+
+
+
+  </div> <!-- /.main-content -->
+
+  <div id="dartdoc-sidebar-right" class="sidebar sidebar-offcanvas-right">
+    <ol>
+
+    <li class="section-title"><a href="../firebase_database_rest/FirebaseStore-class.html#constructors">Constructors</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.html">FirebaseStore</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.api.html">api</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCreate.html">apiCreate</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.create.html">create</a></li>
+
+
+    <li class="section-title">
+      <a href="../firebase_database_rest/FirebaseStore-class.html#instance-properties">Properties</a>
+    </li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/hashCode.html">hashCode</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/path.html">path</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/restApi.html">restApi</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/runtimeType.html">runtimeType</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/subPaths.html">subPaths</a></li>
+
+    <li class="section-title"><a href="../firebase_database_rest/FirebaseStore-class.html#instance-methods">Methods</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/all.html">all</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/create.html">create</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/dataFromJson.html">dataFromJson</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/dataToJson.html">dataToJson</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/delete.html">delete</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/keys.html">keys</a></li>
+    <li class="inherited"><a href="../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/query.html">query</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/queryKeys.html">queryKeys</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/read.html">read</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/streamAll.html">streamAll</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/streamEntry.html">streamEntry</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/streamKeys.html">streamKeys</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/streamQuery.html">streamQuery</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/streamQueryKeys.html">streamQueryKeys</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/subStore.html">subStore</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/toString.html">toString</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/transaction.html">transaction</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/update.html">update</a></li>
+    <li><a href="../firebase_database_rest/FirebaseStore/write.html">write</a></li>
+
+    <li class="section-title inherited"><a href="../firebase_database_rest/FirebaseStore-class.html#operators">Operators</a></li>
+    <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/operator_equals.html">operator ==</a></li>
+
+
+
+
+</ol>
+
+  </div><!--/.sidebar-offcanvas-->
+
+</main>
+
+<footer>
+  <span class="no-break">
+    firebase_database_rest
+      1.0.0-nullsafety.0
+  </span>
+
+</footer>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="../static-assets/typeahead.bundle.min.js"></script>
+<script src="../static-assets/highlight.pack.js"></script>
+<script src="../static-assets/script.js"></script>
+
+
+</body>
+
+</html>
