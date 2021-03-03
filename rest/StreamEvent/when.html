@@ -28,7 +28,7 @@
     <li><a href="../../index.html">firebase_database_rest</a></li>
     <li><a href="../../rest/rest-library.html">rest</a></li>
     <li><a href="../../rest/StreamEvent-class.html">StreamEvent</a></li>
-    <li class="self-crumb">when&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; abstract method</li>
+    <li class="self-crumb">when&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; method</li>
   </ol>
   <div class="self-name">when</div>
   <form class="search navbar-right" role="search">
@@ -49,7 +49,7 @@
       <li><a href="../../index.html">firebase_database_rest</a></li>
       <li><a href="../../rest/rest-library.html">rest</a></li>
       <li><a href="../../rest/StreamEvent-class.html">StreamEvent</a></li>
-      <li class="self-crumb">when&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; abstract method</li>
+      <li class="self-crumb">when&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; method</li>
     </ol>
     
     <h5>StreamEvent class</h5>
@@ -57,7 +57,6 @@
 
     <li class="section-title"><a href="../../rest/StreamEvent-class.html#constructors">Constructors</a></li>
     <li><a href="../../rest/StreamEvent/StreamEvent.authRevoked.html">authRevoked</a></li>
-    <li><a href="../../rest/StreamEvent/StreamEvent.fromJson.html">fromJson</a></li>
     <li><a href="../../rest/StreamEvent/StreamEvent.patch.html">patch</a></li>
     <li><a href="../../rest/StreamEvent/StreamEvent.put.html">put</a></li>
 
@@ -120,7 +119,8 @@ TResult when&lt;TResult extends Object?&gt;({
   required TResult Function(String path, dynamic data) put,
   required TResult Function(String path, dynamic data) patch,
   required TResult Function() authRevoked,
-});</code></pre>
+}) =&gt;
+    throw _privateConstructorUsedError;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -133,7 +133,7 @@ TResult when&lt;TResult extends Object?&gt;({
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

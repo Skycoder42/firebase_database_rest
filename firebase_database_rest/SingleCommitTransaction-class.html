@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,17 @@
       <div><h1><span class="kind-class">SingleCommitTransaction&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A helper class to easily create single commit transaction.</p>
+<p>Single commit transactions are transaction that can only be commit once
+and become invalid after. This class helps in that it handels this case
+and automatically throws a <a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a> if someone tries to commit
+it twice.</p>
+<p>Instead of <a href="../firebase_database_rest/SingleCommitTransaction/commitUpdate.html">commitUpdate</a> and <a href="../firebase_database_rest/SingleCommitTransaction/commitDelete.html">commitDelete</a>, you have to implement
+<a href="../firebase_database_rest/SingleCommitTransaction/commitUpdateImpl.html">commitUpdateImpl</a> and <a href="../firebase_database_rest/SingleCommitTransaction/commitDeleteImpl.html">commitDeleteImpl</a>. They follow the same semantics
+as their originals, beeing called by them after it was verified the
+transaction was not committed yet.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -146,7 +156,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>         
         </dt>
         <dd class="inherited">
-           
+          The current eTag of the entry. <a href="../firebase_database_rest/FirebaseTransaction/eTag.html">[...]</a>
                   <div class="features">read-only, inherited</div>
 </dd>
         <dt id="hashCode" class="property inherited">
@@ -162,7 +172,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>         
         </dt>
         <dd class="inherited">
-           
+          The key of the entry beeing modified in the transaction 
                   <div class="features">read-only, inherited</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -178,7 +188,7 @@
           <span class="signature">&#8594; T?</span>         
         </dt>
         <dd class="inherited">
-           
+          The current value of the entry. <a href="../firebase_database_rest/FirebaseTransaction/value.html">[...]</a>
                   <div class="features">read-only, inherited</div>
 </dd>
       </dl>
@@ -193,7 +203,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Tries to commit the deletion of the entry. <a href="../firebase_database_rest/SingleCommitTransaction/commitDelete.html">[...]</a>
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/nonVirtual-constant.html">nonVirtual</a>, override</div>
 </dd>
         <dt id="commitDeleteImpl" class="callable">
@@ -202,7 +212,7 @@
           </span>
                   </dt>
         <dd>
-           
+          See <a href="../firebase_database_rest/SingleCommitTransaction/commitDelete.html">commitDelete</a> 
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
 </dd>
         <dt id="commitUpdate" class="callable">
@@ -211,7 +221,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Tries to commit an update of the entry to <code>data</code>. <a href="../firebase_database_rest/SingleCommitTransaction/commitUpdate.html">[...]</a>
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/nonVirtual-constant.html">nonVirtual</a>, override</div>
 </dd>
         <dt id="commitUpdateImpl" class="callable">
@@ -220,7 +230,7 @@
           </span>
                   </dt>
         <dd>
-           
+          See <a href="../firebase_database_rest/SingleCommitTransaction/commitUpdate.html">commitUpdate</a> 
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
 </dd>
         <dt id="noSuchMethod" class="callable inherited">
@@ -303,7 +313,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

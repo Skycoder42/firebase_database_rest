@@ -79,7 +79,6 @@
     <li><a href="../../firebase_database_rest/FirebaseStore/delete.html">delete</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/keys.html">keys</a></li>
-    <li class="inherited"><a href="../../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/query.html">query</a></li>
@@ -123,6 +122,12 @@
 </ol>)
       <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
     </section>
+    <section class="desc markdown">
+      <p>A virtual method that applies a set of <code>updatedFields</code> on existing <code>data</code>.</p>
+<p>This should return a copy of <code>data</code>, with all fields that appear in
+<code>updatedFields</code> updated to the respective value. Any fields that do not
+appear in <code>updatedFields</code> should stay unchanged.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -140,7 +145,7 @@ T patchData(T data, Map&lt;String, dynamic&gt; updatedFields);</code></pre>
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

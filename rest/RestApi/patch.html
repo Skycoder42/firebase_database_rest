@@ -104,6 +104,15 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Sends a patch requests to the database to update some data.</p>
+<p>Tries to update the given fields of <code>updateChildren</code> to their new values
+at <code>path</code>, or to the virtual root, if not set. Only fields explicitly
+specified are updated, all other fields are not modified. To delete a
+field, set the update value to <code>null</code>.</p>
+<p>The <code>printMode</code> can be used to control how data is formatted by the
+server.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -136,7 +145,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

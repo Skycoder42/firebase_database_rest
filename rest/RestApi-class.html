@@ -79,6 +79,13 @@
       <div><h1><span class="kind-class">RestApi</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A class to communicated with the firebase realtime database REST-API</p>
+<p>Many methods of this class accept an <code>eTag</code> parameter. The Firebase ETag is
+the unique identifier for the current data at a specified location. If the
+data changes at that location, the ETag changes, too. If set, the class
+will request this eTag and return in via <a href="../rest/DbResponse/eTag.html">DbResponse.eTag</a>.</p>
+    </section>
     
 
     <section class="summary offset-anchor" id="constructors">
@@ -89,7 +96,7 @@
           <span class="name"><a href="../rest/RestApi/RestApi.html">RestApi</a></span><span class="signature">(<span class="parameter" id="-param-client">{<span>required</span> <span class="type-annotation"><a href="https://pub.dev/documentation/http/0.13.0/http/Client-class.html">Client</a></span> <span class="parameter-name">client</span>, </span><span class="parameter" id="-param-database"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">database</span>, </span><span class="parameter" id="-param-basePath"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">basePath</span> = <span class="default-value">&#39;&#39;</span>, </span><span class="parameter" id="-param-idToken"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">idToken</span>, </span><span class="parameter" id="-param-timeout"><span class="type-annotation"><a href="../firebase_database_rest/Timeout-class.html">Timeout</a>?</span> <span class="parameter-name">timeout</span>, </span><span class="parameter" id="-param-writeSizeLimit"><span class="type-annotation"><a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a>?</span> <span class="parameter-name">writeSizeLimit</span>}</span>)</span>
         </dt>
         <dd>
-           
+          Default constructor. 
         </dd>
       </dl>
     </section>
@@ -103,7 +110,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>         
         </dt>
         <dd>
-           
+          A sub path in the database to use as virtual root path. 
                   <div class="features">final</div>
 </dd>
         <dt id="client" class="property">
@@ -111,7 +118,7 @@
           <span class="signature">&#8594; <a href="https://pub.dev/documentation/http/0.13.0/http/Client-class.html">Client</a></span>         
         </dt>
         <dd>
-           
+          The HTTP-Client that should be used to send requests. 
                   <div class="features">final</div>
 </dd>
         <dt id="database" class="property">
@@ -119,7 +126,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>         
         </dt>
         <dd>
-           
+          The name of the database to connect to. 
                   <div class="features">final</div>
 </dd>
         <dt id="hashCode" class="property inherited">
@@ -135,7 +142,7 @@
           <span class="signature">&#8596; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span>         
         </dt>
         <dd>
-           
+          The idToken to use for requests. <a href="../rest/RestApi/idToken.html">[...]</a>
                   <div class="features">read / write</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -151,7 +158,7 @@
           <span class="signature">&#8596; <a href="../firebase_database_rest/Timeout-class.html">Timeout</a>?</span>         
         </dt>
         <dd>
-           
+          The timeout for read requests. See <a href="../firebase_database_rest/Timeout-class.html">Timeout</a>. 
                   <div class="features">read / write</div>
 </dd>
         <dt id="writeSizeLimit" class="property">
@@ -159,7 +166,7 @@
           <span class="signature">&#8596; <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a>?</span>         
         </dt>
         <dd>
-           
+          The limit for how big write requests can be. See <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a>. 
                   <div class="features">read / write</div>
 </dd>
       </dl>
@@ -174,7 +181,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Sends a delete requests to the database to delete some data. <a href="../rest/RestApi/delete.html">[...]</a>
                   
 </dd>
         <dt id="get" class="callable">
@@ -183,7 +190,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Sends a get requests to the database to read some data. <a href="../rest/RestApi/get.html">[...]</a>
                   
 </dd>
         <dt id="noSuchMethod" class="callable inherited">
@@ -201,7 +208,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Sends a patch requests to the database to update some data. <a href="../rest/RestApi/patch.html">[...]</a>
                   
 </dd>
         <dt id="post" class="callable">
@@ -210,7 +217,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Sends a post requests to the database to create new data. <a href="../rest/RestApi/post.html">[...]</a>
                   
 </dd>
         <dt id="put" class="callable">
@@ -219,7 +226,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Sends a put requests to the database to write some data. <a href="../rest/RestApi/put.html">[...]</a>
                   
 </dd>
         <dt id="stream" class="callable">
@@ -228,7 +235,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Sends a get requests to the database to stream changes. <a href="../rest/RestApi/stream.html">[...]</a>
                   
 </dd>
         <dt id="toString" class="callable inherited">
@@ -307,7 +314,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

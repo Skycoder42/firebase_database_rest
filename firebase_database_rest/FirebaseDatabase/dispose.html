@@ -96,12 +96,16 @@
 (<wbr>)
       
     </section>
+    <section class="desc markdown">
+      <p>Disposes of the database.</p>
+<p>This internally canceles any subscriptions to the accounts idTokenStream,
+if active.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">Future&lt;void&gt; dispose() async {
   await _idTokenSub?.cancel();
-  account?.dispose();
 }</code></pre>
     </section>
 
@@ -115,7 +119,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

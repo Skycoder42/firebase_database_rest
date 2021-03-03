@@ -28,7 +28,7 @@
     <li><a href="../../index.html">firebase_database_rest</a></li>
     <li><a href="../../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent-class.html">ValueEvent<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">map&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; abstract method</li>
+    <li class="self-crumb">map&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; method</li>
   </ol>
   <div class="self-name">map</div>
   <form class="search navbar-right" role="search">
@@ -49,7 +49,7 @@
       <li><a href="../../index.html">firebase_database_rest</a></li>
       <li><a href="../../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
       <li><a href="../../firebase_database_rest/ValueEvent-class.html">ValueEvent<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-      <li class="self-crumb">map&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; abstract method</li>
+      <li class="self-crumb">map&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; method</li>
     </ol>
     
     <h5>ValueEvent class</h5>
@@ -58,6 +58,7 @@
     <li class="section-title"><a href="../../firebase_database_rest/ValueEvent-class.html#constructors">Constructors</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.delete.html">delete</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.invalidPath.html">invalidPath</a></li>
+    <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.patch.html">patch</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.update.html">update</a></li>
 
 
@@ -100,6 +101,9 @@
 &lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt;(<wbr><ol class="parameter-list"><li><span class="parameter" id="map-param-update">{<span>required</span> <span class="type-annotation">TResult</span> <span class="parameter-name">update</span>(<ol class="parameter-list"><li><span class="parameter" id="param-value"><span class="type-annotation">_ValueUpdate<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">value</span></span></li>
 </ol>
 ), </span></li>
+<li><span class="parameter" id="map-param-patch"><span>required</span> <span class="type-annotation">TResult</span> <span class="parameter-name">patch</span>(<ol class="parameter-list"><li><span class="parameter" id="param-value"><span class="type-annotation">_ValuePatch<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">value</span></span></li>
+</ol>
+), </span></li>
 <li><span class="parameter" id="map-param-delete"><span>required</span> <span class="type-annotation">TResult</span> <span class="parameter-name">delete</span>(<ol class="parameter-list"><li><span class="parameter" id="param-value"><span class="type-annotation">_ValueDelete<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">value</span></span></li>
 </ol>
 ), </span></li>
@@ -115,9 +119,11 @@
       <pre class="language-dart"><code class="language-dart">@optionalTypeArgs
 TResult map&lt;TResult extends Object?&gt;({
   required TResult Function(_ValueUpdate&lt;T&gt; value) update,
+  required TResult Function(_ValuePatch&lt;T&gt; value) patch,
   required TResult Function(_ValueDelete&lt;T&gt; value) delete,
   required TResult Function(_ValueInvalidPath&lt;T&gt; value) invalidPath,
-});</code></pre>
+}) =&gt;
+    throw _privateConstructorUsedError;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -130,7 +136,7 @@ TResult map&lt;TResult extends Object?&gt;({
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

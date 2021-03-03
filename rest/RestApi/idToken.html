@@ -100,6 +100,11 @@
           <span class="name ">idToken</span>
           <div class="features">read / write</div>
         </section>
+        <section class="desc markdown">
+          <p>The idToken to use for requests.</p>
+<p>If set to null, all requests will be unauthenticated. If set, all requests
+will add the auth parameter and thus be authenticated.</p>
+        </section>
                 <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
           <pre class="language-dart"><code class="language-dart">String? idToken;
@@ -117,7 +122,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

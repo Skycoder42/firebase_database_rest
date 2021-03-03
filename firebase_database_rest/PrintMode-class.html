@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,9 @@
       <div><h1><span class="kind-enum">PrintMode</span> enum     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>Formats the data returned in the response from the server.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -126,7 +128,7 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/PrintMode-class.html">PrintMode</a></span>
                   </dt>
         <dd>
-           
+          <p>View the data in a human-readable format.</p> 
                   
   <div>
             <span class="signature"><code>const PrintMode(0)</code></span>
@@ -137,7 +139,9 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/PrintMode-class.html">PrintMode</a></span>
                   </dt>
         <dd>
-           
+          <p>Used to suppress the output from the server when writing data. The
+resulting response will be empty and indicated by a 204 No Content HTTP
+status code.</p> 
                   
   <div>
             <span class="signature"><code>const PrintMode(1)</code></span>
@@ -264,7 +268,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

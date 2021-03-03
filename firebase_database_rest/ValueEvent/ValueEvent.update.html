@@ -58,6 +58,7 @@
     <li class="section-title"><a href="../../firebase_database_rest/ValueEvent-class.html#constructors">Constructors</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.delete.html">delete</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.invalidPath.html">invalidPath</a></li>
+    <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.patch.html">patch</a></li>
     <li><a href="../../firebase_database_rest/ValueEvent/ValueEvent.update.html">update</a></li>
 
 
@@ -95,10 +96,16 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Indicates that the entry has been updated on the server to <code>data</code>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">const factory ValueEvent.update(T data) = _ValueUpdate&lt;T&gt;;</code></pre>
+      <pre class="language-dart"><code class="language-dart">const factory ValueEvent.update(
+  &#47;&#47;&#47; The current value of the entry.
+  T data,
+) = _ValueUpdate&lt;T&gt;;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -111,7 +118,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

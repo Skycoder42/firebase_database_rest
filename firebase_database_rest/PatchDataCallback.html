@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -115,6 +114,13 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>A callback definition for a method that applies a set of <code>updatedFields</code> on
+existing <code>data</code>.</p>
+<p>This should return a copy of <code>data</code>, with all fields that appear in
+<code>updatedFields</code> updated to the respective value. Any fields that do not
+appear in <code>updatedFields</code> should stay unchanged.</p>
+    </section>
         <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">typedef PatchDataCallback&lt;T&gt; = T Function(
@@ -133,7 +139,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

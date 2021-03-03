@@ -28,7 +28,7 @@
     <li><a href="../../index.html">firebase_database_rest</a></li>
     <li><a href="../../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
     <li><a href="../../firebase_database_rest/StoreEvent-class.html">StoreEvent<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-    <li class="self-crumb">maybeWhen&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; abstract method</li>
+    <li class="self-crumb">maybeWhen&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; method</li>
   </ol>
   <div class="self-name">maybeWhen</div>
   <form class="search navbar-right" role="search">
@@ -49,7 +49,7 @@
       <li><a href="../../index.html">firebase_database_rest</a></li>
       <li><a href="../../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
       <li><a href="../../firebase_database_rest/StoreEvent-class.html">StoreEvent<span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></a></li>
-      <li class="self-crumb">maybeWhen&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; abstract method</li>
+      <li class="self-crumb">maybeWhen&lt;<wbr><span class="type-parameter">TResult extends Object?</span>&gt; method</li>
     </ol>
     
     <h5>StoreEvent class</h5>
@@ -110,7 +110,7 @@
 </ol>
 ), </span></li>
 <li><span class="parameter" id="maybeWhen-param-patch"><span class="type-annotation">TResult</span> <span class="parameter-name">patch</span>(<ol class="parameter-list"><li><span class="parameter" id="param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span></li>
-<li><span class="parameter" id="param-value"><span class="type-annotation"><a href="../../firebase_database_rest/PatchSet-class.html">PatchSet</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">value</span></span></li>
+<li><span class="parameter" id="param-patchSet"><span class="type-annotation"><a href="../../firebase_database_rest/PatchSet-class.html">PatchSet</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">patchSet</span></span></li>
 </ol>
 ), </span></li>
 <li><span class="parameter" id="maybeWhen-param-invalidPath"><span class="type-annotation">TResult</span> <span class="parameter-name">invalidPath</span>(<ol class="parameter-list"><li><span class="parameter" id="param-path"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span></span></li>
@@ -129,10 +129,11 @@ TResult maybeWhen&lt;TResult extends Object?&gt;({
   TResult Function(Map&lt;String, T&gt; data)? reset,
   TResult Function(String key, T value)? put,
   TResult Function(String key)? delete,
-  TResult Function(String key, PatchSet&lt;T&gt; value)? patch,
+  TResult Function(String key, PatchSet&lt;T&gt; patchSet)? patch,
   TResult Function(String path)? invalidPath,
   required TResult orElse(),
-});</code></pre>
+}) =&gt;
+    throw _privateConstructorUsedError;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -145,7 +146,7 @@ TResult maybeWhen&lt;TResult extends Object?&gt;({
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

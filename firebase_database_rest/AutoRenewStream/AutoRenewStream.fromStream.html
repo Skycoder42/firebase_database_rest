@@ -129,6 +129,13 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Existing stream constructor.</p>
+<p>In case you already have an <code>initialStream</code>, you can use this constructor.
+It will use the <code>initialStream</code> as soon as <a href="../../firebase_database_rest/AutoRenewStream/listen.html">listen</a> is is called. Only
+when this initial stream throws an <a href="../../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a>, the
+<code>streamFactory</code> is used to create a new one.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -146,7 +153,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

@@ -94,6 +94,31 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Order elements by a certain child value before filtering them.</p>
+<p>When using <code>orderBy</code> with the name of a child key, data that contains the
+specified child key will be ordered as follows:</p>
+<ol>
+<li>Children with a <code>null</code> value for the specified child key come first.</li>
+<li>Children with a value of <code>false</code> for the specified child key come next.
+If multiple children have a value of <code>false</code>, they are sorted
+lexicographically by key.</li>
+<li>Children with a value of <code>true</code> for the specified child key come next.
+If multiple children have a value of <code>true</code>, they are sorted
+lexicographically by key.</li>
+<li>Children with a numeric value come next, sorted in ascending order.
+If multiple children have the same numerical value for the specified
+child node, they are sorted by key.</li>
+<li>Strings come after numbers, and are sorted lexicographically in
+ascending order. If multiple children have the same value for the
+specified child node, they are ordered lexicographically by key.</li>
+<li>Objects come last, and sorted lexicographically by key in ascending
+order.</li>
+</ol>
+<p>The filtered results are returned unordered. If the order of your data is
+important you should sort the results in your application after they are
+returned from Firebase.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -111,7 +136,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

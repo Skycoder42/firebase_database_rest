@@ -98,10 +98,19 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Indicates the entry under <code>key</code> has been updated to a new <code>value</code>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">const factory StoreEvent.put(String key, T value) = _StorePut&lt;T&gt;;</code></pre>
+      <pre class="language-dart"><code class="language-dart">const factory StoreEvent.put(
+  &#47;&#47;&#47; The key of the data that has been updated.
+  String key,
+
+  &#47;&#47;&#47; The updated data.
+  T value,
+) = _StorePut&lt;T&gt;;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -114,7 +123,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

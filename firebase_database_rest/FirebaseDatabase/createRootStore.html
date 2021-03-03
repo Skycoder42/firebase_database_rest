@@ -99,6 +99,13 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Creates a typed variant of the <a href="../../firebase_database_rest/FirebaseDatabase/rootStore.html">rootStore</a>.</p>
+<p>Returns a store which is scoped to the database, just like the
+<a href="../../firebase_database_rest/FirebaseDatabase/rootStore.html">rootStore</a>, but with converter callbacks to make it typed to <code>T</code>.</p>
+<p>Iternally uses <a href="../../firebase_database_rest/FirebaseStore/FirebaseStore.apiCreate.html">FirebaseStore.apiCreate</a> with <code>onDataFromJson</code>,
+<code>onDataToJson</code> and <code>onPatchData</code> to create the store.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -126,7 +133,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

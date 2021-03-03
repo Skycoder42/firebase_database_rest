@@ -95,12 +95,23 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Default constructor</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">const factory ServerSentEvent({
+  &#47;&#47;&#47; The event type of this SSE. Defaults to `message`, if not set.
   @Default(&#39;message&#39;) String event,
+
+  &#47;&#47;&#47; The data that was sent by the server. Can be an empty string.
   required String data,
+
+  &#47;&#47;&#47; An optional ID of the last event.
+  &#47;&#47;&#47;
+  &#47;&#47;&#47; Can be used to resume a stream if supported by the server. See
+  &#47;&#47;&#47; [EventSourceClientX.stream].
   String? lastEventId,
 }) = _ServerSentEvent;</code></pre>
     </section>
@@ -115,7 +126,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

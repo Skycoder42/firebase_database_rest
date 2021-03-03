@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,10 @@
       <div><h1><span class="kind-enum">WriteSizeLimit</span> enum     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>Realtime Database estimates the size of each write request and aborts
+requests that will take longer than the target time.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -126,7 +129,7 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a></span>
                   </dt>
         <dd>
-           
+          <p>target=60s</p> 
                   
   <div>
             <span class="signature"><code>const WriteSizeLimit(3)</code></span>
@@ -137,7 +140,7 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a></span>
                   </dt>
         <dd>
-           
+          <p>target=30s</p> 
                   
   <div>
             <span class="signature"><code>const WriteSizeLimit(2)</code></span>
@@ -148,7 +151,7 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a></span>
                   </dt>
         <dd>
-           
+          <p>target=10s</p> 
                   
   <div>
             <span class="signature"><code>const WriteSizeLimit(1)</code></span>
@@ -159,7 +162,7 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a></span>
                   </dt>
         <dd>
-           
+          <p>target=1s</p> 
                   
   <div>
             <span class="signature"><code>const WriteSizeLimit(0)</code></span>
@@ -170,7 +173,7 @@
           <span class="signature">&#8594; const <a href="../firebase_database_rest/WriteSizeLimit-class.html">WriteSizeLimit</a></span>
                   </dt>
         <dd>
-           
+          <p>Exceptionally large writes (with up to 256MB payload) are allowed</p> 
                   
   <div>
             <span class="signature"><code>const WriteSizeLimit(4)</code></span>
@@ -300,7 +303,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

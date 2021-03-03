@@ -101,6 +101,21 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Constructs a database for an authenticated user.</p>
+<p>This constructor needs an <code>account</code> and a <code>database</code>. The <code>account</code> is the
+user account used to authenticate to the API, the <code>database</code> is the name
+of the database to connect to. If you want to connec to a database without
+a user, use <a href="../../firebase_database_rest/FirebaseDatabase/FirebaseDatabase.unauthenticated.html">FirebaseDatabase.unauthenticated</a> instead.</p>
+<p>The database will reuse the <a href="https://pub.dev/documentation/http/0.13.0/http/Client-class.html">Client</a> of the <a href="https://pub.dev/documentation/firebase_auth_rest/2.0.0-nullsafety.0/firebase_auth_rest/FirebaseAccount/api.html">FirebaseAccount.api</a>, unless
+<code>client</code> is explicitly specified. Either one is used to create the <a href="../../firebase_database_rest/FirebaseDatabase/api.html">api</a>.</p>
+<p>By default, the database will connect to the root path of the server
+database. If you want to connect to a subset of the database, use
+<code>basePath</code> to only connect to that part. This path will also be the path
+of the <a href="../../firebase_database_rest/FirebaseDatabase/rootStore.html">rootStore</a>.</p>
+<p>In addition, you can use <code>timeout</code> and <code>writeSizeLimit</code> to configure the
+corresponding values of the newly created <a href="../../rest/RestApi-class.html">RestApi</a>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -134,7 +149,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

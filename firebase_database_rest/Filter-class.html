@@ -27,7 +27,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">firebase_database_rest</a></li>
     <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
-    <li class="self-crumb">Filter abstract class</li>
+    <li class="self-crumb">Filter class</li>
   </ol>
   <div class="self-name">Filter</div>
   <form class="search navbar-right" role="search">
@@ -47,7 +47,7 @@
     <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
       <li><a href="../index.html">firebase_database_rest</a></li>
       <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
-      <li class="self-crumb">Filter abstract class</li>
+      <li class="self-crumb">Filter class</li>
     </ol>
     
     <h5>firebase_database_rest library</h5>
@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,19 @@
       <div><h1><span class="kind-class">Filter</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A helper class to dynamically construct realtime database queries.</p>
+<p>You can use one of the three factory constructors of this class,
+<a href="../firebase_database_rest/Filter/property.html">Filter.property</a>, <a href="../firebase_database_rest/Filter/key.html">Filter.key</a> or <a href="../firebase_database_rest/Filter/value.html">Filter.value</a> to generate a
+<a href="../firebase_database_rest/FilterBuilder-class.html">FilterBuilder</a>. This will define how elements are ordere by the server
+before filters are applied. You can then use the returned builder to apply
+filters and finally build the actual filter that can be passed to API
+methods.</p>
+<p><strong>Important:</strong> This does not affect the ordering of the received data -
+after filters have been applied, the data can be returned by the server in
+any order - if you only (or in addition) need to sort returned data, do so
+on the client side.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -211,7 +223,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Order elements by their key before filtering them. <a href="../firebase_database_rest/Filter/key.html">[...]</a>
                   
 </dd>
         <dt id="property" class="callable">
@@ -220,7 +232,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Order elements by a certain child value before filtering them. <a href="../firebase_database_rest/Filter/property.html">[...]</a>
                   
 </dd>
         <dt id="value" class="callable">
@@ -229,7 +241,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Order elements by their value before filtering them. <a href="../firebase_database_rest/Filter/value.html">[...]</a>
                   
 </dd>
       </dl>
@@ -274,7 +286,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

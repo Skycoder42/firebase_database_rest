@@ -79,7 +79,6 @@
     <li><a href="../../firebase_database_rest/FirebaseStore/delete.html">delete</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/keys.html">keys</a></li>
-    <li class="inherited"><a href="../../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/query.html">query</a></li>
@@ -118,6 +117,17 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Starts a write transaction on the store.</p>
+<p>Reads the current value of <code>key</code> from the store, including the current
+eTag. Returns a transaction constructed from that result. You can use that
+transaction to update or delete the store entry, making sure it has not
+been modified since it was read.</p>
+<p>If <code>eTagReceiver</code> was specified, it will contain the current eTag of the
+updated or deleted entry after the transaction was <em>committed</em>. <strong>Not</strong>
+after this future resolves, like for other methods. To get the eTag of
+the read operation, use <a href="../../firebase_database_rest/FirebaseTransaction/eTag.html">FirebaseTransaction.eTag</a>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -149,7 +159,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

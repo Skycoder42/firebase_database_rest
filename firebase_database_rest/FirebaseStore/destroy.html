@@ -79,7 +79,6 @@
     <li><a href="../../firebase_database_rest/FirebaseStore/delete.html">delete</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/keys.html">keys</a></li>
-    <li class="inherited"><a href="../../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/query.html">query</a></li>
@@ -118,6 +117,16 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Deletes everything in the store.</p>
+<p>Recursively deletes all values that exists in this store. After this
+operation, the store will be empty.</p>
+<p>If <code>eTagReceiver</code> was specified, it will contain the current eTag of the
+deleted store after the returned future was resolved. This should always
+be <a href="../../firebase_database_rest/ApiConstants/nullETag-constant.html">ApiConstants.nullETag</a>, but is available here for consistency. To only
+destroy the store if data was not changed, pass the <code>eTag</code> of the last
+known store state. You can obtain this eTag via <a href="../../firebase_database_rest/FirebaseStore/keys.html">keys</a> or <a href="../../firebase_database_rest/FirebaseStore/all.html">all</a>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -145,7 +154,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

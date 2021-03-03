@@ -96,10 +96,17 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Indicates a full store state, with all <code>keys</code> as currently stored on the
+server.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">const factory KeyEvent.reset(List&lt;String&gt; keys) = _KeyReset;</code></pre>
+      <pre class="language-dart"><code class="language-dart">const factory KeyEvent.reset(
+  &#47;&#47;&#47; A list with all keys that have data.
+  List&lt;String&gt; keys,
+) = _KeyReset;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -112,7 +119,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

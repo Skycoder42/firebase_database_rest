@@ -96,9 +96,14 @@
           <div class="features">inherited</div>
 </section>
         
-                        <section class="summary source-code" id="source">
+                <section class="desc markdown">
+          <p>An optional ID of the last event.</p>
+<p>Can be used to resume a stream if supported by the server. See
+<a href="../../stream/EventSourceClientX/stream.html">EventSourceClientX.stream</a>.</p>
+        </section>
+                <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
-          <pre class="language-dart"><code class="language-dart">String? get lastEventId;</code></pre>
+          <pre class="language-dart"><code class="language-dart">String? get lastEventId =&gt; throw _privateConstructorUsedError;</code></pre>
         </section>
 </section>
         
@@ -112,7 +117,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

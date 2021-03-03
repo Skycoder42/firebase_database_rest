@@ -27,7 +27,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">firebase_database_rest</a></li>
     <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
-    <li class="self-crumb">DbException abstract class</li>
+    <li class="self-crumb">DbException class</li>
   </ol>
   <div class="self-name">DbException</div>
   <form class="search navbar-right" role="search">
@@ -47,7 +47,7 @@
     <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
       <li><a href="../index.html">firebase_database_rest</a></li>
       <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
-      <li class="self-crumb">DbException abstract class</li>
+      <li class="self-crumb">DbException class</li>
     </ol>
     
     <h5>firebase_database_rest library</h5>
@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,13 @@
       <div><h1><span class="kind-class">DbException</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A generic exception representing an error when accessing the realtime
+database</p>
+<p>This error is thrown everywhere in the library, where the realtime database
+is beeing accessed. It wrapps the HTTP-Errors that can happen when using
+the REST-API, including the HTTP-Status code.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -136,15 +142,8 @@
           <span class="name"><a href="../firebase_database_rest/DbException/DbException.html">DbException</a></span><span class="signature">(<span class="parameter" id="-param-statusCode">{<span>@<a href="https://pub.dev/documentation/freezed_annotation/0.13.0-nullsafety.0/freezed_annotation/Default-class.html">Default</a>(400)</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/int-class.html">int</a></span> <span class="parameter-name">statusCode</span>, </span><span class="parameter" id="-param-error"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">error</span>}</span>)</span>
         </dt>
         <dd>
-           
+          Default constructor <a href="../firebase_database_rest/DbException/DbException.html">[...]</a>
           <div class="constructor-modifier features">const</div>
-          <div class="constructor-modifier features">factory</div>
-        </dd>
-        <dt id="DbException.fromJson" class="callable">
-          <span class="name"><a href="../firebase_database_rest/DbException/DbException.fromJson.html">DbException.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">json</span></span>)</span>
-        </dt>
-        <dd>
-           
           <div class="constructor-modifier features">factory</div>
         </dd>
       </dl>
@@ -167,7 +166,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span>         
         </dt>
         <dd class="inherited">
-           
+          An optional error message, if the firebase servers provided one. 
                   <div class="features">read-only, inherited</div>
 </dd>
         <dt id="hashCode" class="property inherited">
@@ -183,7 +182,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/bool-class.html">bool</a></span>         
         </dt>
         <dd>
-           
+          Checks if this error is the virtual "event stream canceled" error event 
                   <div class="features">read-only</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -199,7 +198,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/int-class.html">int</a></span>         
         </dt>
         <dd class="inherited">
-           
+          The HTTP status code returned by the request 
                   <div class="features">read-only, inherited</div>
 </dd>
       </dl>
@@ -263,7 +262,6 @@
 
     <li class="section-title"><a href="../firebase_database_rest/DbException-class.html#constructors">Constructors</a></li>
     <li><a href="../firebase_database_rest/DbException/DbException.html">DbException</a></li>
-    <li><a href="../firebase_database_rest/DbException/DbException.fromJson.html">fromJson</a></li>
 
 
     <li class="section-title">
@@ -296,7 +294,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

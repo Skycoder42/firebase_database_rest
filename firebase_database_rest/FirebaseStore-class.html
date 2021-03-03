@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,17 @@
       <div><h1><span class="kind-class">FirebaseStore&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A store the provides access to a selected part of a firebase database.</p>
+<p>This class is the core element of the library. It's a view to a part of
+the database, specifically a defined <a href="../firebase_database_rest/FirebaseStore/path.html">path</a> and all elements directly
+beneath this path.</p>
+<p>This is an abstract class, as it is typed and needs converter functions
+to transform the data to json and back, as firebase expects a json
+representation of whatever you want to store there. You can either extend
+this class and implement the required methods, or you can use
+<a href="../firebase_database_rest/FirebaseStore/create.html">FirebaseStore.create</a> and pass callbacks to it to do the same.</p>
+    </section>
     
 
     <section class="summary offset-anchor" id="constructors">
@@ -117,26 +127,27 @@
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.html">FirebaseStore</a></span><span class="signature">(<span class="parameter" id="-param-parent">{<span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a></span> <span class="parameter-name">parent</span>, </span><span class="parameter" id="-param-path"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>}</span>)</span>
         </dt>
         <dd>
-           
+          Constructs a store from a <code>parent</code> store and a sub <code>path</code>. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.html">[...]</a>
         </dd>
         <dt id="FirebaseStore.api" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.api.html">FirebaseStore.api</a></span><span class="signature">(<span class="parameter" id="api-param-restApi">{<span>required</span> <span class="type-annotation"><a href="../rest/RestApi-class.html">RestApi</a></span> <span class="parameter-name">restApi</span>, </span><span class="parameter" id="api-param-subPaths"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">subPaths</span>}</span>)</span>
         </dt>
         <dd>
-           
+          Constructs a store from a <code>restApi</code> and a list of <code>subPaths</code>. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.api.html">[...]</a>
         </dd>
         <dt id="FirebaseStore.apiCreate" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCreate.html">FirebaseStore.apiCreate</a></span><span class="signature">(<span class="parameter" id="apiCreate-param-restApi">{<span>required</span> <span class="type-annotation"><a href="../rest/RestApi-class.html">RestApi</a></span> <span class="parameter-name">restApi</span>, </span><span class="parameter" id="apiCreate-param-subPaths"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span> <span class="parameter-name">subPaths</span>, </span><span class="parameter" id="apiCreate-param-onDataFromJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataFromJson</span>, </span><span class="parameter" id="apiCreate-param-onDataToJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataToJsonCallback.html">DataToJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataToJson</span>, </span><span class="parameter" id="apiCreate-param-onPatchData"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/PatchDataCallback.html">PatchDataCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onPatchData</span>}</span>)</span>
         </dt>
         <dd>
-           
+          Constructs a store from a <code>restApi</code> and a list of <code>subPaths</code> with
+callbacks. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCreate.html">[...]</a>
           <div class="constructor-modifier features">factory</div>
         </dd>
         <dt id="FirebaseStore.create" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/FirebaseStore.create.html">FirebaseStore.create</a></span><span class="signature">(<span class="parameter" id="create-param-parent">{<span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a></span> <span class="parameter-name">parent</span>, </span><span class="parameter" id="create-param-path"><span>required</span> <span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">path</span>, </span><span class="parameter" id="create-param-onDataFromJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataFromJson</span>, </span><span class="parameter" id="create-param-onDataToJson"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/DataToJsonCallback.html">DataToJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onDataToJson</span>, </span><span class="parameter" id="create-param-onPatchData"><span>required</span> <span class="type-annotation"><a href="../firebase_database_rest/PatchDataCallback.html">PatchDataCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">onPatchData</span>}</span>)</span>
         </dt>
         <dd>
-           
+          Constructs a store from a <code>parent</code> store and a sub <code>path</code> with callbacks. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.create.html">[...]</a>
           <div class="constructor-modifier features">factory</div>
         </dd>
       </dl>
@@ -159,7 +170,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>         
         </dt>
         <dd>
-           
+          The virtual root path of this store. 
                   <div class="features">read-only</div>
 </dd>
         <dt id="restApi" class="property">
@@ -167,7 +178,7 @@
           <span class="signature">&#8594; <a href="../rest/RestApi-class.html">RestApi</a></span>         
         </dt>
         <dd>
-           
+          The underlying <a href="../rest/RestApi-class.html">RestApi</a> that is used to communicate with the server. 
                   <div class="features">final</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -183,7 +194,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/List-class.html">List</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span></span>         
         </dt>
         <dd>
-           
+          A raw, segmented representation of <a href="../firebase_database_rest/FirebaseStore/path.html">path</a>. 
                   <div class="features">final</div>
 </dd>
       </dl>
@@ -198,7 +209,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Read all entries from the store. <a href="../firebase_database_rest/FirebaseStore/all.html">[...]</a>
                   
 </dd>
         <dt id="create" class="callable">
@@ -207,7 +218,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Creates a new entry in the store. <a href="../firebase_database_rest/FirebaseStore/create.html">[...]</a>
                   
 </dd>
         <dt id="dataFromJson" class="callable">
@@ -216,7 +227,7 @@
           </span>
                   </dt>
         <dd>
-           
+          A virtual method that converts a <code>json</code> object to a data type. <a href="../firebase_database_rest/FirebaseStore/dataFromJson.html">[...]</a>
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
 </dd>
         <dt id="dataToJson" class="callable">
@@ -225,7 +236,7 @@
           </span>
                   </dt>
         <dd>
-           
+          A virtual method that converts a <code>data</code> type to a json object. <a href="../firebase_database_rest/FirebaseStore/dataToJson.html">[...]</a>
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
 </dd>
         <dt id="delete" class="callable">
@@ -234,7 +245,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Removes an entry from the store. <a href="../firebase_database_rest/FirebaseStore/delete.html">[...]</a>
                   
 </dd>
         <dt id="destroy" class="callable">
@@ -243,7 +254,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Deletes everything in the store. <a href="../firebase_database_rest/FirebaseStore/destroy.html">[...]</a>
                   
 </dd>
         <dt id="keys" class="callable">
@@ -252,17 +263,8 @@
           </span>
                   </dt>
         <dd>
-           
+          Lists all keys of the store. <a href="../firebase_database_rest/FirebaseStore/keys.html">[...]</a>
                   
-</dd>
-        <dt id="mapTransform" class="callable inherited">
-          <span class="name"><a href="../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></span><span class="signature">(<wbr><span class="parameter" id="mapTransform-param-data"><span class="type-annotation">dynamic</span> <span class="parameter-name">data</span>, </span><span class="parameter" id="mapTransform-param-dataFromJson"><span class="type-annotation"><a href="../firebase_database_rest/DataFromJsonCallback.html">DataFromJsonCallback</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">dataFromJson</span></span>)
-            <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">T</span>&gt;</span></span>
-          </span>
-                  </dt>
-        <dd class="inherited">
-           
-                  <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a>, inherited</div>
 </dd>
         <dt id="noSuchMethod" class="callable inherited">
           <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></span><span class="signature">(<wbr><span class="parameter" id="noSuchMethod-param-invocation"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Invocation-class.html">Invocation</a></span> <span class="parameter-name">invocation</span></span>)
@@ -279,7 +281,7 @@
           </span>
                   </dt>
         <dd>
-           
+          A virtual method that applies a set of <code>updatedFields</code> on existing <code>data</code>. <a href="../firebase_database_rest/FirebaseStore/patchData.html">[...]</a>
                   <div class="features">@<a href="https://pub.dev/documentation/meta/1.3.0/meta/protected-constant.html">protected</a></div>
 </dd>
         <dt id="query" class="callable">
@@ -288,7 +290,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Queries a subset of entries from the store. <a href="../firebase_database_rest/FirebaseStore/query.html">[...]</a>
                   
 </dd>
         <dt id="queryKeys" class="callable">
@@ -297,7 +299,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Queries a subset of keys from the store. <a href="../firebase_database_rest/FirebaseStore/queryKeys.html">[...]</a>
                   
 </dd>
         <dt id="read" class="callable">
@@ -306,7 +308,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Read the entry with the given key from the store. <a href="../firebase_database_rest/FirebaseStore/read.html">[...]</a>
                   
 </dd>
         <dt id="streamAll" class="callable">
@@ -315,7 +317,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Streams all changes in the store. <a href="../firebase_database_rest/FirebaseStore/streamAll.html">[...]</a>
                   
 </dd>
         <dt id="streamEntry" class="callable">
@@ -324,7 +326,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Streams changes of a single entry in the store. <a href="../firebase_database_rest/FirebaseStore/streamEntry.html">[...]</a>
                   
 </dd>
         <dt id="streamKeys" class="callable">
@@ -333,7 +335,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Streams all changes by keys in the store. <a href="../firebase_database_rest/FirebaseStore/streamKeys.html">[...]</a>
                   
 </dd>
         <dt id="streamQuery" class="callable">
@@ -342,7 +344,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Streams all changes in the store that match the given filter. <a href="../firebase_database_rest/FirebaseStore/streamQuery.html">[...]</a>
                   
 </dd>
         <dt id="streamQueryKeys" class="callable">
@@ -351,7 +353,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Streams all changes by keys in the store that match the given filter. <a href="../firebase_database_rest/FirebaseStore/streamQueryKeys.html">[...]</a>
                   
 </dd>
         <dt id="subStore" class="callable">
@@ -360,7 +362,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Creates a callback based child store to this store. <a href="../firebase_database_rest/FirebaseStore/subStore.html">[...]</a>
                   
 </dd>
         <dt id="toString" class="callable inherited">
@@ -378,7 +380,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Starts a write transaction on the store. <a href="../firebase_database_rest/FirebaseStore/transaction.html">[...]</a>
                   
 </dd>
         <dt id="update" class="callable">
@@ -387,7 +389,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Partially updates an existing entry in the store. <a href="../firebase_database_rest/FirebaseStore/update.html">[...]</a>
                   
 </dd>
         <dt id="write" class="callable">
@@ -396,7 +398,7 @@
           </span>
                   </dt>
         <dd>
-           
+          Writes the given data to the store. <a href="../firebase_database_rest/FirebaseStore/write.html">[...]</a>
                   
 </dd>
       </dl>
@@ -449,7 +451,6 @@
     <li><a href="../firebase_database_rest/FirebaseStore/delete.html">delete</a></li>
     <li><a href="../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></li>
     <li><a href="../firebase_database_rest/FirebaseStore/keys.html">keys</a></li>
-    <li class="inherited"><a href="../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></li>
     <li><a href="../firebase_database_rest/FirebaseStore/query.html">query</a></li>
@@ -481,7 +482,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

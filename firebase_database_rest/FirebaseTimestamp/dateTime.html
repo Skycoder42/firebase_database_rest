@@ -57,7 +57,6 @@
 
     <li class="section-title"><a href="../../firebase_database_rest/FirebaseTimestamp-class.html#constructors">Constructors</a></li>
     <li><a href="../../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.html">FirebaseTimestamp</a></li>
-    <li><a href="../../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.fromJson.html">fromJson</a></li>
     <li><a href="../../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.server.html">server</a></li>
 
 
@@ -73,7 +72,6 @@
     <li class="inherited"><a href="../../firebase_database_rest/FirebaseTimestamp/maybeMap.html">maybeMap</a></li>
     <li class="inherited"><a href="../../firebase_database_rest/FirebaseTimestamp/maybeWhen.html">maybeWhen</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../../firebase_database_rest/FirebaseTimestamp/toJson.html">toJson</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/toString.html">toString</a></li>
     <li class="inherited"><a href="../../firebase_database_rest/FirebaseTimestamp/when.html">when</a></li>
 
@@ -100,7 +98,15 @@
           
 </section>
         
-                        <section class="summary source-code" id="source">
+                <section class="desc markdown">
+          <p>Returns the datetime value of the timestamp.</p>
+<p>If used on a <a href="../../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.server.html">FirebaseTimestamp.server</a>, it will throw an error. Otherwise
+the datetime value is returned.</p>
+<p><strong>Note:</strong> Timestamps returned from the database server are always actual
+datetime values and can be savely deconstructed. Only those exlicitly
+created as server timestamp can throw.</p>
+        </section>
+                <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
           <pre class="language-dart"><code class="language-dart">DateTime get dateTime =&gt; when(
       (value) =&gt; value,
@@ -121,7 +127,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

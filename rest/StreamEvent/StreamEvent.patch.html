@@ -57,7 +57,6 @@
 
     <li class="section-title"><a href="../../rest/StreamEvent-class.html#constructors">Constructors</a></li>
     <li><a href="../../rest/StreamEvent/StreamEvent.authRevoked.html">authRevoked</a></li>
-    <li><a href="../../rest/StreamEvent/StreamEvent.fromJson.html">fromJson</a></li>
     <li><a href="../../rest/StreamEvent/StreamEvent.patch.html">patch</a></li>
     <li><a href="../../rest/StreamEvent/StreamEvent.put.html">put</a></li>
 
@@ -98,11 +97,17 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>A patch event, indicating data was patched.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">const factory StreamEvent.patch({
+  &#47;&#47;&#47; The sub path to the request were data was modified.
   required String path,
+
+  &#47;&#47;&#47; The patchset that was sent by the client to modify the server data.
   required dynamic data,
 }) = StreamEventPatch;</code></pre>
     </section>
@@ -117,7 +122,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -114,6 +113,11 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>A callback definition for a method that converts a <code>data</code> type to a json
+object.</p>
+<p>The json beeing returned from this method <strong>must never</strong> be <code>null</code>.</p>
+    </section>
         <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
       <pre class="language-dart"><code class="language-dart">typedef DataToJsonCallback&lt;T&gt; = dynamic Function(T data);</code></pre>
@@ -129,7 +133,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

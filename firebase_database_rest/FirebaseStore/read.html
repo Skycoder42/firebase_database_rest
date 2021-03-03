@@ -79,7 +79,6 @@
     <li><a href="../../firebase_database_rest/FirebaseStore/delete.html">delete</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/destroy.html">destroy</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/keys.html">keys</a></li>
-    <li class="inherited"><a href="../../firebase_database_rest/FirebaseStore/mapTransform.html">mapTransform</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/patchData.html">patchData</a></li>
     <li><a href="../../firebase_database_rest/FirebaseStore/query.html">query</a></li>
@@ -118,6 +117,13 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Read the entry with the given key from the store.</p>
+<p>If an entry exists for <code>key</code>, the deserialized value will be returned. If
+it does not exists, <code>null</code> is returned instead.</p>
+<p>If <code>eTagReceiver</code> was specified, it will contain the current eTag of the
+read entry after the returned future was resolved.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -141,7 +147,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

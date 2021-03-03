@@ -27,7 +27,7 @@
   <ol class="breadcrumbs gt-separated dark hidden-xs">
     <li><a href="../index.html">firebase_database_rest</a></li>
     <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
-    <li class="self-crumb">FirebaseTimestamp abstract class</li>
+    <li class="self-crumb">FirebaseTimestamp class</li>
   </ol>
   <div class="self-name">FirebaseTimestamp</div>
   <form class="search navbar-right" role="search">
@@ -47,7 +47,7 @@
     <ol class="breadcrumbs gt-separated dark hidden-l" id="sidebar-nav">
       <li><a href="../index.html">firebase_database_rest</a></li>
       <li><a href="../firebase_database_rest/firebase_database_rest-library.html">firebase_database_rest</a></li>
-      <li class="self-crumb">FirebaseTimestamp abstract class</li>
+      <li class="self-crumb">FirebaseTimestamp class</li>
     </ol>
     
     <h5>firebase_database_rest library</h5>
@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,14 @@
       <div><h1><span class="kind-class">FirebaseTimestamp</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A virtual timestamp that can either be a <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/DateTime-class.html">DateTime</a> or a server set value.</p>
+<p>If you want to use a server timestamp for a database entry, you should use
+this class instead of <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/DateTime-class.html">DateTime</a>. It can be either set to a date time,
+allowing you to set an actual time, or to <a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.server.html">FirebaseTimestamp.server</a>, which
+is a placeholder that will be replaced by the server time upon beeing
+stored.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -130,22 +137,16 @@
           <span class="name"><a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.html">FirebaseTimestamp</a></span><span class="signature">(<span class="parameter" id="-param-value"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/DateTime-class.html">DateTime</a></span> <span class="parameter-name">value</span></span>)</span>
         </dt>
         <dd>
-           
+          Creates a timestamp from a <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/DateTime-class.html">DateTime</a> value. 
           <div class="constructor-modifier features">const</div>
-          <div class="constructor-modifier features">factory</div>
-        </dd>
-        <dt id="FirebaseTimestamp.fromJson" class="callable">
-          <span class="name"><a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.fromJson.html">FirebaseTimestamp.fromJson</a></span><span class="signature">(<span class="parameter" id="fromJson-param-json"><span class="type-annotation">dynamic</span> <span class="parameter-name">json</span></span>)</span>
-        </dt>
-        <dd>
-           
           <div class="constructor-modifier features">factory</div>
         </dd>
         <dt id="FirebaseTimestamp.server" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.server.html">FirebaseTimestamp.server</a></span><span class="signature">()</span>
         </dt>
         <dd>
-           
+          Creates a timestamp placeholder that will be set to an actual <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/DateTime-class.html">DateTime</a>
+upon beeing stored on the server. 
           <div class="constructor-modifier features">const</div>
           <div class="constructor-modifier features">factory</div>
         </dd>
@@ -161,7 +162,7 @@
           <span class="signature">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/DateTime-class.html">DateTime</a></span>         
         </dt>
         <dd>
-           
+          Returns the datetime value of the timestamp. <a href="../firebase_database_rest/FirebaseTimestamp/dateTime.html">[...]</a>
                   <div class="features">read-only</div>
 </dd>
         <dt id="hashCode" class="property inherited">
@@ -222,15 +223,6 @@
           Invoked when a non-existent method or property is accessed. <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">[...]</a>
                   <div class="features">inherited</div>
 </dd>
-        <dt id="toJson" class="callable">
-          <span class="name"><a href="../firebase_database_rest/FirebaseTimestamp/toJson.html">toJson</a></span><span class="signature">(<wbr>)
-            <span class="returntype parameter">&#8594; dynamic</span>
-          </span>
-                  </dt>
-        <dd>
-           
-                  
-</dd>
         <dt id="toString" class="callable inherited">
           <span class="name"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/toString.html">toString</a></span><span class="signature">(<wbr>)
             <span class="returntype parameter">&#8594; <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>
@@ -277,7 +269,6 @@
 
     <li class="section-title"><a href="../firebase_database_rest/FirebaseTimestamp-class.html#constructors">Constructors</a></li>
     <li><a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.html">FirebaseTimestamp</a></li>
-    <li><a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.fromJson.html">fromJson</a></li>
     <li><a href="../firebase_database_rest/FirebaseTimestamp/FirebaseTimestamp.server.html">server</a></li>
 
 
@@ -293,7 +284,6 @@
     <li class="inherited"><a href="../firebase_database_rest/FirebaseTimestamp/maybeMap.html">maybeMap</a></li>
     <li class="inherited"><a href="../firebase_database_rest/FirebaseTimestamp/maybeWhen.html">maybeWhen</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/noSuchMethod.html">noSuchMethod</a></li>
-    <li><a href="../firebase_database_rest/FirebaseTimestamp/toJson.html">toJson</a></li>
     <li class="inherited"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Object/toString.html">toString</a></li>
     <li class="inherited"><a href="../firebase_database_rest/FirebaseTimestamp/when.html">when</a></li>
 
@@ -312,7 +302,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

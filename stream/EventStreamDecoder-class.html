@@ -76,6 +76,23 @@
       <div><h1><span class="kind-class">EventStreamDecoder</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A stream transformer that converts a string stream into a stream of
+<a href="../stream/ServerSentEvent-class.html">ServerSentEvent</a>s</p>
+<p><strong>Note:</strong> Typically, you would use <a href="../stream/EventSource-class.html">EventSource</a> instead of using this
+class directly.</p>
+<p>Expects each string to represent one line. This means any input stream must
+first be split into lines before beeing passed to this transformer. It will
+consume multiple lines to generate SSE events from the data.</p>
+<p>A typical usage would be to use for example the <a href="https://pub.dev/documentation/http/0.13.0/http/StreamedResponse-class.html">StreamedResponse</a> from the
+<code>http</code> package and transform it in multiple steps like this:</p>
+<pre class="language-.dart"><code class="language-.dart">StreamedResponse response = // ...
+final sseStream = response.stream
+  .transform(utf8.decoder)
+  .transform(const LineSplitter())
+  .transform(const EventStreamDecoder());
+</code></pre>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -101,7 +118,7 @@
           <span class="name"><a href="../stream/EventStreamDecoder/EventStreamDecoder.html">EventStreamDecoder</a></span><span class="signature">()</span>
         </dt>
         <dd>
-           
+          Default constructor 
           <div class="constructor-modifier features">const</div>
         </dd>
       </dl>
@@ -226,7 +243,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

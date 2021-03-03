@@ -57,7 +57,6 @@
 
     <li class="section-title"><a href="../../firebase_database_rest/DbException-class.html#constructors">Constructors</a></li>
     <li><a href="../../firebase_database_rest/DbException/DbException.html">DbException</a></li>
-    <li><a href="../../firebase_database_rest/DbException/DbException.fromJson.html">fromJson</a></li>
 
 
     <li class="section-title">
@@ -98,7 +97,10 @@
           
 </section>
         
-                        <section class="summary source-code" id="source">
+                <section class="desc markdown">
+          <p>Checks if this error is the virtual "event stream canceled" error event</p>
+        </section>
+                <section class="summary source-code" id="source">
           <h2><span>Implementation</span></h2>
           <pre class="language-dart"><code class="language-dart">bool get isEventStreamCanceled =&gt;
     statusCode == ApiConstants.eventStreamCanceled;</code></pre>
@@ -115,7 +117,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

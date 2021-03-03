@@ -106,6 +106,25 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Sends a get requests to the database to stream changes.</p>
+<p>Tries to stream the data at <code>path</code>, or the whole virtual root, if not set.
+The <code>printMode</code> and <code>formatMode</code> can be used to control how data is
+formatted by the server.</p>
+<p>The resulting future will stream various <a href="../../rest/StreamEvent-class.html">StreamEvent</a>s, which provide
+realtime information about how data is changed in the database. Please
+note that the first element of every stream will be a <a href="../../rest/StreamEvent/StreamEvent.put.html">StreamEvent.put</a>
+with the current state of the database at <code>path</code>. All events after that
+are fired as data is manipulated in the database.</p>
+<p>The <code>shallow</code> parameter can be used to help you work with large datasets
+without needing to download everything. Set this to true to limit the
+depth of the data returned at a location. If the data at the location is
+a JSON primitive (string, number or boolean), its value will simply be
+returned. If the data snapshot at the location is a JSON object, the
+values for each key will be truncated to true.</p>
+<p>If <code>filter</code> is added, that filter will be applied to filter the results
+returned by the server. See <a href="../../firebase_database_rest/Filter-class.html">Filter</a> for more details.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -140,7 +159,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

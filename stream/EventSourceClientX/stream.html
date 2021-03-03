@@ -78,9 +78,26 @@
             <span class="name ">stream</span>
 (<wbr><ol class="parameter-list"><li><span class="parameter" id="stream-param-url"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Uri-class.html">Uri</a></span> <span class="parameter-name">url</span>, </span></li>
 <li><span class="parameter" id="stream-param-headers">{<span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>&gt;</span>?</span> <span class="parameter-name">headers</span>, </span></li>
-<li><span class="parameter" id="stream-param-lastEventID"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">lastEventID</span>}</span></li>
+<li><span class="parameter" id="stream-param-lastEventId"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">lastEventId</span>, </span></li>
+<li><span class="parameter" id="stream-param-verb"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">verb</span> = <span class="default-value">&#39;GET&#39;</span>}</span></li>
 </ol>)
       
+    </section>
+    <section class="desc markdown">
+      <p>Send a HTTP-request that results in a stream of <code>ServerSentEvent</code>s in form
+of a <code>EventSource</code>.</p>
+<p>This methods makes a GET-requests (or whatever <code>verb</code> is set to) with the
+given <code>url</code>. It will add some additional headers to <code>headers</code>, leading to
+the server returning an "endless" stream of data in form of
+<code>ServerSentEvent</code>s.</p>
+<p>If the server supports it, and you had to cancel a stream at some point,
+you might be able to resume it by passing the
+<code>ServerSentEvent.lastEventId</code> of the last event that has been received to
+<code>lastEventId</code>.</p>
+<p>If the requests succeeds, the returned future will resolve to a stream of
+SSEs, an <code>EventSource</code>. If the request does not succeed (any statuscode
+but 200), instead a <code>ClientStreamException</code> will be thrown, containing
+the faulty result.</p>
     </section>
     
     <section class="summary source-code" id="source">
@@ -88,16 +105,17 @@
       <pre class="language-dart"><code class="language-dart">Future&lt;EventSource&gt; stream(
   Uri url, {
   Map&lt;String, String&gt;? headers,
-  String? lastEventID,
+  String? lastEventId,
+  String verb = &#39;GET&#39;,
 }) async {
-  final request = Request(&#39;GET&#39;, url);
+  final request = Request(verb, url);
   if (headers != null) {
     request.headers.addAll(headers);
   }
   request.headers[&#39;Accept&#39;] = &#39;text&#47;event-stream&#39;;
   request.headers[&#39;Cache-Control&#39;] = &#39;no-cache&#39;;
-  if (lastEventID != null) {
-    request.headers[&#39;Last-Event-ID&#39;] = lastEventID;
+  if (lastEventId != null) {
+    request.headers[&#39;Last-Event-ID&#39;] = lastEventId;
   }
 
   final response = await send(request);
@@ -118,7 +136,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

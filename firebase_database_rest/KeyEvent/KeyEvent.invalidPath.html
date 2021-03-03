@@ -96,10 +96,20 @@
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Indicates that data was modified at an unsupported <code>path</code>.</p>
+<p>This event appears whenever data modified is not a direct child of the
+store, as the library does not support deep events. It is an event instead
+of an error as it can happen quite often depening on how you use the
+database. Typically, this event can simply be ignored or logged.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">const factory KeyEvent.invalidPath(String path) = _KeyInvalidPath;</code></pre>
+      <pre class="language-dart"><code class="language-dart">const factory KeyEvent.invalidPath(
+  &#47;&#47;&#47; The invalid subpath that was modified on the server.
+  String path,
+) = _KeyInvalidPath;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -112,7 +122,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

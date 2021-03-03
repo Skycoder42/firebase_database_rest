@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,12 @@
       <div><h1><span class="kind-class">TransactionFailedException</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>Exception that gets thrown if the server rejects the transaction because
+the eTag has been modified.</p>
+<p>This is simply thrown in place of a
+<a href="../firebase_database_rest/DbException-class.html">DbException</a> to make transaction errors easier to detect.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -132,7 +137,7 @@
           <span class="name"><a href="../firebase_database_rest/TransactionFailedException/TransactionFailedException.html">TransactionFailedException</a></span><span class="signature">()</span>
         </dt>
         <dd>
-           
+          Default constructor 
           <div class="constructor-modifier features">const</div>
         </dd>
       </dl>
@@ -237,7 +242,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -107,6 +106,18 @@
       <div><h1><span class="kind-class">AutoRenewStream&lt;<wbr><span class="type-parameter">T</span>&gt;</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>A wrapper around streams that throw <a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a>s to automatically
+reconnect and continue the stream seamlessly.</p>
+<p>This works by providing a <a href="../firebase_database_rest/AutoRenewStream/streamFactory.html">streamFactory</a>, which is used to generate new
+streams. The stream events are simply forwarded to the consumer of this
+stream. If the original stream throws an <a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a>, instead of
+forwarding, the original stream gets canceled and <a href="../firebase_database_rest/AutoRenewStream/streamFactory.html">streamFactory</a> is used to
+create a new stream, which is then forwarded.</p>
+<p><strong>Note:</strong> This only recreates streams for that specific exceptions. All
+other errors are simply forwarded. If the original stream gets closed or
+canceled, so does this stream.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -132,13 +143,13 @@
           <span class="name"><a href="../firebase_database_rest/AutoRenewStream/AutoRenewStream.html">AutoRenewStream</a></span><span class="signature">(<span class="parameter" id="-param-streamFactory"><span class="type-annotation"><a href="../firebase_database_rest/StreamFactory.html">StreamFactory</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">streamFactory</span></span>)</span>
         </dt>
         <dd>
-           
+          Default constructor <a href="../firebase_database_rest/AutoRenewStream/AutoRenewStream.html">[...]</a>
         </dd>
         <dt id="AutoRenewStream.fromStream" class="callable">
           <span class="name"><a href="../firebase_database_rest/AutoRenewStream/AutoRenewStream.fromStream.html">AutoRenewStream.fromStream</a></span><span class="signature">(<span class="parameter" id="fromStream-param-initialStream"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Stream-class.html">Stream</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">initialStream</span>, </span><span class="parameter" id="fromStream-param-streamFactory"><span class="type-annotation"><a href="../firebase_database_rest/StreamFactory.html">StreamFactory</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">streamFactory</span></span>)</span>
         </dt>
         <dd>
-           
+          Existing stream constructor. <a href="../firebase_database_rest/AutoRenewStream/AutoRenewStream.fromStream.html">[...]</a>
         </dd>
       </dl>
     </section>
@@ -216,7 +227,7 @@
           <span class="signature">&#8594; <a href="../firebase_database_rest/StreamFactory.html">StreamFactory</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>         
         </dt>
         <dd>
-           
+          The stream factory that is used to generate new streams. 
                   <div class="features">final</div>
 </dd>
       </dl>
@@ -618,7 +629,7 @@ occurred. <a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-async/Strea
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

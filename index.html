@@ -58,19 +58,88 @@
 
   <div id="dartdoc-main-content" class="main-content">
       <section class="desc markdown">
-        <p>A library for Dart developers.</p>
-<p>Created from templates made available by Stagehand under a BSD-style
-<a href="https://github.com/dart-lang/stagehand/blob/master/LICENSE">license</a>.</p>
+        <h1 id="firebase_database_rest">firebase_database_rest</h1>
+<p><a href="https://github.com/Skycoder42/firebase_database_rest/actions/workflows/ci.yaml"><img src="https://github.com/Skycoder42/firebase_database_rest/actions/workflows/ci.yaml/badge.svg" alt="Continous Integration"></a>
+<a href="https://pub.dev/packages/firebase_database_rest"><img src="https://img.shields.io/pub/v/firebase_database_rest" alt="Pub Version"></a></p>
+<p>A platform independent Dart/Flutter Wrapper for the Firebase Realtime Database API based on REST</p>
+<h2 id="features">Features</h2>
+<ul>
+<li>Pure Dart-based implementation
+<ul>
+<li>works on all platforms supported by dart</li>
+</ul>
+</li>
+<li>Uses the official REST-API endpoints</li>
+<li>Provides high-level classes to manage database access</li>
+<li>Supports Model-Binding via Generics and converter functions</li>
+<li>Full support of all Realtime database features:
+<ul>
+<li>Supports CRUD</li>
+<li>Supports Queries (filtering, sorting)</li>
+<li>Supports realtime server updates (streaming)</li>
+<li>Supports ETags</li>
+</ul>
+</li>
+<li>Provides a Transaction class to wrap ETag-Logic into safe transactions</li>
+<li>Provides timestamp class for server set timestamps</li>
+<li>Proivides low-level REST classes for direct API access (import <code>firebase_database_rest/rest.dart</code>)</li>
+<li>Fully integrated with <a href="https://github.com/Skycoder42/firebase_auth_rest">firebase_auth_rest</a> - including automatic auth token refreshes</li>
+</ul>
+<h2 id="installation">Installation</h2>
+<p>Simply add <code>firebase_database_rest</code> to your <code>pubspec.yaml</code> and run <code>pub get</code> (or <code>flutter pub get</code>).</p>
 <h2 id="usage">Usage</h2>
-<p>A simple usage example:</p>
-<pre class="language-dart"><code class="language-dart">import 'package:firebase_database_rest/firebase_database_rest.dart';
+<p>The libraries primary class is the <code>FirebaseStore</code>. It is a high-level class that allows access to a certain part of the realtime database using Model binding.
+With this store, you specify a subpatch and can then perform various operations on elements below that path (list key, create, read, write or delete them, ...).
+This class also provides the APIs for streaming changes and transactions. Typically, your application would use multiple stores, one for each dataclass you plan
+to store at a certain path.</p>
+<p>The second important class is the <code>FirebaseDatabase</code>. It serves as the toplevel class, parent to all stores and manages the database connection itself, including
+the management of the associated <code>FirebaseAccount</code> (from <a href="https://github.com/Skycoder42/firebase_auth_rest">firebase_auth_rest</a>) and background ressources 
+(like the REST-API interface).</p>
+<p>The following code is a simple example, which can be found in full length, including errorhandling, at <a href="https://pub.dev/packages/firebase_database_rest/example">https://pub.dev/packages/firebase_database_rest/example</a>. It loggs into firebase as anonymous user, starts streaming changes and then does some db operations.</p>
+<pre class="language-.dart"><code class="language-.dart">// The data class that is stored in firebase
+class ExampleModel {
+  final int id;
+  final String data;
 
-main() {
-  var awesome = new Awesome();
+  const ExampleModel(this.id, this.data);
+  
+  // ...
 }
+
+// obtain a firebase account, using firebase_auth_rest
+final account = // ...
+
+// create a database reference from that account
+final database = FirebaseDatabase(
+  account: account,
+  database: 'my-firebase-project-id,
+  basePath: 'application/${account.localId}/example',
+);
+
+// create typed store. In this example, a callback store is used, but you can
+// also just extend FirebaseStore
+final store = database.createRootStore&lt;ExampleModel&gt;(
+  onDataFromJson: (dynamic json) =&gt; ExampleModel.fromJson(json),
+  onDataToJson: (data) =&gt; data.toJson(),
+  onPatchData: (data, updatedFields) =&gt; data.patch(updatedFields),
+);
+
+// add a stream listener that reports database changes in realtime
+sub = (await store.streamAll()).listen((e) =&gt; print('Stream update: $e'));
+
+// add some data to the store
+await store.create(const ExampleModel(1, 'A'));
+
+// get all data in store
+print('All data: ${await store.all()}');
+
+// cleanup: stop streaming and dispose of the database
+await sub.cancel();
+await database.dispose();
 </code></pre>
-<h2 id="features-and-bugs">Features and bugs</h2>
-<p>Please file feature requests and bugs at the <a href="http://example.com/issues/replaceme">issue tracker</a>.</p>
+<h2 id="documentation">Documentation</h2>
+<p>The documentation is available at <a href="https://pub.dev/documentation/firebase_database_rest/latest/">https://pub.dev/documentation/firebase_database_rest/latest/</a>. 
+A full example can be found at <a href="https://pub.dev/packages/firebase_database_rest/example">https://pub.dev/packages/firebase_database_rest/example</a>.</p>
       </section>
       
       <section class="summary">
@@ -107,7 +176,7 @@ main() {
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

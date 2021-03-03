@@ -94,15 +94,23 @@
     <section class="multi-line-signature">
       const
       <span class="name ">StoreEvent&lt;<wbr><span class="type-parameter">T</span>&gt;.patch</span>(<wbr><ol class="parameter-list"><li><span class="parameter" id="patch-param-key"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span></li>
-<li><span class="parameter" id="patch-param-value"><span class="type-annotation"><a href="../../firebase_database_rest/PatchSet-class.html">PatchSet</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">value</span></span></li>
+<li><span class="parameter" id="patch-param-patchSet"><span class="type-annotation"><a href="../../firebase_database_rest/PatchSet-class.html">PatchSet</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span> <span class="parameter-name">patchSet</span></span></li>
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>Indicates the entry under <code>key</code> has been patched with <code>patchSet</code>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">const factory StoreEvent.patch(String key, PatchSet&lt;T&gt; value) =
-    _StorePatch&lt;T&gt;;</code></pre>
+      <pre class="language-dart"><code class="language-dart">const factory StoreEvent.patch(
+  &#47;&#47;&#47; The key of the data that has been patched.
+  String key,
+
+  &#47;&#47;&#47; The patchSet set that can be applied to the current value.
+  PatchSet&lt;T&gt; patchSet,
+) = _StorePatch&lt;T&gt;;</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -115,7 +123,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

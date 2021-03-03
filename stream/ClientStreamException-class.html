@@ -76,6 +76,15 @@
       <div><h1><span class="kind-class">ClientStreamException</span> class     <a href="https://dart.dev/null-safety" class="feature feature-null-safety" title="Supports the null safety language feature.">Null safety</a>
  </h1></div>
 
+    <section class="desc markdown">
+      <p>An exception that is thrown if <a href="../stream/EventSourceClientX/stream.html">EventSourceClientX.stream</a> fails.</p>
+<p>In the case the HTTP-request to the server fails, this exception will be
+thrown with the original response as payload. This allows you to handle
+HTTP-errors cleanly.</p>
+<p><strong>Note:</strong> If the HTTP-Request succeeds, but some errors occure while
+streaming data, any exception will be thrown from the stream itself. This
+exception is only used for the case that the initial request fails.</p>
+    </section>
     
     <section>
       <dl class="dl-horizontal">
@@ -101,7 +110,7 @@
           <span class="name"><a href="../stream/ClientStreamException/ClientStreamException.html">ClientStreamException</a></span><span class="signature">(<span class="parameter" id="-param-response"><span class="type-annotation"><a href="https://pub.dev/documentation/http/0.13.0/http/Response-class.html">Response</a></span> <span class="parameter-name">response</span></span>)</span>
         </dt>
         <dd>
-           
+          Default constructor 
           <div class="constructor-modifier features">const</div>
         </dd>
       </dl>
@@ -124,7 +133,7 @@
           <span class="signature">&#8594; <a href="https://pub.dev/documentation/http/0.13.0/http/Response-class.html">Response</a></span>         
         </dt>
         <dd>
-           
+          The http response that indicates an error. 
                   <div class="features">final</div>
 </dd>
         <dt id="runtimeType" class="property inherited">
@@ -215,7 +224,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

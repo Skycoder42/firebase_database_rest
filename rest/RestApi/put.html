@@ -106,6 +106,18 @@
 </ol>)
       
     </section>
+    <section class="desc markdown">
+      <p>Sends a put requests to the database to write some data.</p>
+<p>Tries to write the <code>body</code> to <code>path</code>, or to the virtual root, if not set.
+The <code>printMode</code> can be used to control how data is formatted by the
+server.</p>
+<p>Finally, the <code>eTag</code> parameter can be set to true to request an eTag for
+the given data. If you only want to be able to write data if it was not
+changed, pass a previously acquired eTag as <code>ifMatch</code>. In case the eTag
+does not match, the request will fail with the
+<a href="../../firebase_database_rest/ApiConstants/statusCodeETagMismatch-constant.html">ApiConstants.statusCodeETagMismatch</a> status code. To only write data that
+does not exist yet, use <a href="../../firebase_database_rest/ApiConstants/nullETag-constant.html">ApiConstants.nullETag</a> as value for <code>ifMatch</code>.</p>
+    </section>
     
     <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
@@ -142,7 +154,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>

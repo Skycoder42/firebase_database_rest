@@ -97,7 +97,6 @@
   <li><a href="../firebase_database_rest/AlreadyComittedError-class.html">AlreadyComittedError</a></li>
   <li><a href="../firebase_database_rest/AuthRevokedException-class.html">AuthRevokedException</a></li>
   <li><a href="../firebase_database_rest/DbException-class.html">DbException</a></li>
-  <li><a href="../firebase_database_rest/PatchOnNullError-class.html">PatchOnNullError</a></li>
   <li><a href="../firebase_database_rest/TransactionFailedException-class.html">TransactionFailedException</a></li>
 </ol>
 
@@ -110,13 +109,19 @@
     <section class="multi-line-signature">
         <span class="returntype"><a href="../firebase_database_rest/PatchSet-class.html">PatchSet</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></span>
                 <span class="name ">PatchSetFactory</span>
-(<wbr><ol class="parameter-list"><li><span class="parameter" id="PatchSetFactory-param-data"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">data</span></span></li>
+(<wbr><ol class="parameter-list"><li><span class="parameter" id="PatchSetFactory-param-updatedFields"><span class="type-annotation"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/Map-class.html">Map</a><span class="signature">&lt;<wbr><span class="type-parameter"><a href="https://api.dart.dev/beta/2.12.0-259.16.beta/dart-core/String-class.html">String</a></span>, <span class="type-parameter">dynamic</span>&gt;</span></span> <span class="parameter-name">updatedFields</span></span></li>
 </ol>)
     </section>
 
+    <section class="desc markdown">
+      <p>A callback the generates instances of a <a href="../firebase_database_rest/PatchSet-class.html">PatchSet</a> from a set of
+<code>updatedFields</code>.</p>
+    </section>
         <section class="summary source-code" id="source">
       <h2><span>Implementation</span></h2>
-      <pre class="language-dart"><code class="language-dart">typedef PatchSetFactory&lt;T&gt; = PatchSet&lt;T&gt; Function(Map&lt;String, dynamic&gt; data);</code></pre>
+      <pre class="language-dart"><code class="language-dart">typedef PatchSetFactory&lt;T&gt; = PatchSet&lt;T&gt; Function(
+  Map&lt;String, dynamic&gt; updatedFields,
+);</code></pre>
     </section>
 
   </div> <!-- /.main-content -->
@@ -129,7 +134,7 @@
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.0-nullsafety.0
+      1.0.0-nullsafety.1
   </span>
 
 </footer>
