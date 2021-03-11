@@ -62,6 +62,7 @@
   <li><a href="../firebase_database_rest/FirebaseStore-class.html">FirebaseStore</a></li>
   <li><a href="../firebase_database_rest/FirebaseTimestamp-class.html">FirebaseTimestamp</a></li>
   <li><a href="../firebase_database_rest/FirebaseTransaction-class.html">FirebaseTransaction</a></li>
+  <li><a href="../firebase_database_rest/JsonConverter-class.html">JsonConverter</a></li>
   <li><a href="../firebase_database_rest/KeyEvent-class.html">KeyEvent</a></li>
   <li><a href="../firebase_database_rest/PatchSet-class.html">PatchSet</a></li>
   <li><a href="../firebase_database_rest/SingleCommitTransaction-class.html">SingleCommitTransaction</a></li>
@@ -118,6 +119,21 @@ this class and implement the required methods, or you can use
 <a href="../firebase_database_rest/FirebaseStore/create.html">FirebaseStore.create</a> and pass callbacks to it to do the same.</p>
     </section>
     
+    <section>
+      <dl class="dl-horizontal">
+
+        <dt>Implemented types</dt>
+        <dd>
+          <ul class="comma-separated clazz-relationships">
+            <li><a href="../firebase_database_rest/JsonConverter-class.html">JsonConverter</a><span class="signature">&lt;<wbr><span class="type-parameter">T</span>&gt;</span></li>
+          </ul>
+        </dd>
+
+
+
+
+      </dl>
+    </section>
 
     <section class="summary offset-anchor" id="constructors">
       <h2>Constructors</h2>
@@ -228,7 +244,7 @@ callbacks. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCre
                   </dt>
         <dd>
           A virtual method that converts a <code>json</code> object to a data type. <a href="../firebase_database_rest/FirebaseStore/dataFromJson.html">[...]</a>
-                  
+                  <div class="features">override</div>
 </dd>
         <dt id="dataToJson" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/dataToJson.html">dataToJson</a></span><span class="signature">(<wbr><span class="parameter" id="dataToJson-param-data"><span class="type-annotation">T</span> <span class="parameter-name">data</span></span>)
@@ -237,7 +253,7 @@ callbacks. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCre
                   </dt>
         <dd>
           A virtual method that converts a <code>data</code> type to a json object. <a href="../firebase_database_rest/FirebaseStore/dataToJson.html">[...]</a>
-                  
+                  <div class="features">override</div>
 </dd>
         <dt id="delete" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/delete.html">delete</a></span><span class="signature">(<wbr><span class="parameter" id="delete-param-key"><span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.1/dart-core/String-class.html">String</a></span> <span class="parameter-name">key</span>, </span><span class="parameter" id="delete-param-eTag">{<span class="type-annotation"><a href="https://api.dart.dev/stable/2.12.1/dart-core/String-class.html">String</a>?</span> <span class="parameter-name">eTag</span>, </span><span class="parameter" id="delete-param-eTagReceiver"><span class="type-annotation"><a href="../firebase_database_rest/ETagReceiver-class.html">ETagReceiver</a>?</span> <span class="parameter-name">eTagReceiver</span>}</span>)
@@ -282,7 +298,7 @@ callbacks. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCre
                   </dt>
         <dd>
           A virtual method that applies a set of <code>updatedFields</code> on existing <code>data</code>. <a href="../firebase_database_rest/FirebaseStore/patchData.html">[...]</a>
-                  
+                  <div class="features">override</div>
 </dd>
         <dt id="query" class="callable">
           <span class="name"><a href="../firebase_database_rest/FirebaseStore/query.html">query</a></span><span class="signature">(<wbr><span class="parameter" id="query-param-filter"><span class="type-annotation"><a href="../firebase_database_rest/Filter-class.html">Filter</a></span> <span class="parameter-name">filter</span></span>)
@@ -482,7 +498,7 @@ callbacks. <a href="../firebase_database_rest/FirebaseStore/FirebaseStore.apiCre
 <footer>
   <span class="no-break">
     firebase_database_rest
-      1.0.1
+      1.0.2
   </span>
 
 </footer>
